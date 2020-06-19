@@ -68,7 +68,7 @@ if __name__ == "__main__":
         transforms.ToTensor(),
         normalize
     ])
-    
+
     content = requests.get(
         "https://s3.amazonaws.com/deep-learning-models/image-models/imagenet_class_index.json").text
     labels = json.loads(content)
