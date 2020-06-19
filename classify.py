@@ -53,7 +53,7 @@ if __name__ == "__main__":
     while message is None:
         message = pubsub.get_message()
 
-    # prepare for the inception v3 model
+    # prepare for the inception v3 model, it would take a long time, it spent 3 min on my mac
     model = models.inception_v3(pretrained=True)
     model.transform_input = True
 
@@ -61,12 +61,14 @@ if __name__ == "__main__":
         mean=[0.485, 0.456, 0.406],
         std=[0.229, 0.224, 0.225]
     )
+
     preprocess = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(299),
         transforms.ToTensor(),
         normalize
     ])
+    
     content = requests.get(
         "https://s3.amazonaws.com/deep-learning-models/image-models/imagenet_class_index.json").text
     labels = json.loads(content)
@@ -74,6 +76,7 @@ if __name__ == "__main__":
     print("model's ready")
 
     processPool = Pool()
+
     while True:
         message = pubsub.get_message()
         if message:
