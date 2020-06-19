@@ -23,7 +23,7 @@ if __name__ == '__main__':
     bot = telepot.Bot("919750665:AAF6RvEAEGPOPS77Q88MTguTW9sAfb3PM6Q")
 
     processPool = Pool()
-    
+
     while True:
         message = pubsub.get_message()
         if message:
