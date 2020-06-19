@@ -8,8 +8,9 @@ import json
 def ifImageExists(msg):
     data = json.loads(msg['data'])
     image_name = data['image_name']
-    count = 0
+    
     # if we cannot receive the image in 10 sec, we would consider it has failed
+    count = 0
     while os.path.isfile(image_name) is False:
         if count >= 10:
             queue.publish("reply", json.dumps({'chat_id': data['chat_id'],
@@ -17,6 +18,7 @@ def ifImageExists(msg):
             return
         count += 1
         time.sleep(1)
+
     queue.publish("classify", msg['data'])
 
 
@@ -31,6 +33,7 @@ if __name__ == '__main__':
         message = pubsub.get_message()
 
     processPool = Pool()
+
     while True:
         message = pubsub.get_message()
         if message:
