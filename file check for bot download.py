@@ -8,7 +8,7 @@ import json
 def ifImageExists(msg):
     data = json.loads(msg['data'])
     image_name = data['image_name']
-    
+
     # if we cannot receive the image in 10 sec, we would consider it has failed
     count = 0
     while os.path.isfile(image_name) is False:
