@@ -34,5 +34,4 @@ bot = telepot.aio.DelegatorBot(TOKEN, [
 
 loop = asyncio.get_event_loop()
 loop.create_task(MessageLoop(bot).run_forever())
-
 loop.run_forever()
