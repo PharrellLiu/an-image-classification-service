@@ -20,6 +20,7 @@ def imageClassify(msg):
     img_variable = Variable(img_tensor)
 
     model.eval()
+
     preds = model(img_variable)
 
     percentage = torch.nn.functional.softmax(preds, dim=1)[0]
@@ -33,12 +34,13 @@ def imageClassify(msg):
     count = 0
     for score, label in predictions[:5]:
         count += 1
-        result = result + label + ':' + str(score)
+        result = result + label + ' : ' + str(score)
         if count < 5:
             result += '\n'
 
     queue.publish("reply", json.dumps({'chat_id': chat_id,
                                        'message': result}))
+
     queue.publish("garbage", image_name)
 
 
@@ -47,7 +49,6 @@ if __name__ == "__main__":
     pubsub = queue.pubsub()
     pubsub.subscribe('classify')
 
-    # The first message you receive will be a confirmation of subscription
     message = pubsub.get_message()
     while message is None:
         message = pubsub.get_message()
