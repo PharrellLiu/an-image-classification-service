@@ -1,6 +1,6 @@
 import json
 from multiprocessing import Pool
-
+import telepot
 from redis import StrictRedis
 
 
@@ -8,7 +8,7 @@ def replyMessage(msg):
     data = json.loads(msg['data'])
     reply = data['message']
     chat_id = data['chat_id']
-
+    bot.sendMessage(chat_id, reply)
 
 
 if __name__ == '__main__':
@@ -21,8 +21,10 @@ if __name__ == '__main__':
     while message is None:
         message = pubsub.get_message()
 
+    bot = telepot.Bot("919750665:AAF6RvEAEGPOPS77Q88MTguTW9sAfb3PM6Q")
+
     processPool = Pool()
     while True:
         message = pubsub.get_message()
         if message:
-            processPool.apply_async()
+            processPool.apply_async(replyMessage, args=(message,))
