@@ -16,7 +16,6 @@ if __name__ == '__main__':
     pubsub = queue.pubsub()
     pubsub.subscribe('reply')
 
-    # The first message you receive will be a confirmation of subscription
     message = pubsub.get_message()
     while message is None:
         message = pubsub.get_message()
@@ -24,6 +23,7 @@ if __name__ == '__main__':
     bot = telepot.Bot("919750665:AAF6RvEAEGPOPS77Q88MTguTW9sAfb3PM6Q")
 
     processPool = Pool()
+    
     while True:
         message = pubsub.get_message()
         if message:
