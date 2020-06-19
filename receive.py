@@ -25,7 +25,7 @@ class MessageCounter(telepot.aio.helper.ChatHandler):
             await self.sender.sendMessage("do not accept it, photo or url please")
 
 
-TOKEN = '919750665:AAF6RvEAEGPOPS77Q88MTguTW9sAfb3PM6Q'
+TOKEN = '***** PUT YOUR TOKEN HERE *****'
 
 bot = telepot.aio.DelegatorBot(TOKEN, [
     pave_event_space()(
