@@ -20,7 +20,7 @@ if __name__ == '__main__':
     while message is None:
         message = pubsub.get_message()
 
-    bot = telepot.Bot("919750665:AAF6RvEAEGPOPS77Q88MTguTW9sAfb3PM6Q")
+    bot = telepot.Bot("***** PUT YOUR TOKEN HERE *****")
 
     processPool = Pool()
 
