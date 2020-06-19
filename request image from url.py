@@ -15,6 +15,7 @@ def requestImage(msg):
     image_url = data['image_url']
     chat_id = data['chat_id']
     image_name = str(chat_id) + time.strftime("%H:%M:%S", time.localtime()) + '.png'
+
     retries = 3
     while retries > 0:
         try:
@@ -28,6 +29,7 @@ def requestImage(msg):
                 return
             retries -= 1
             continue
+
     # check if the file is an image or not
     try:
         image = Image.open(image_name)
@@ -35,6 +37,7 @@ def requestImage(msg):
         queue.publish("reply", json.dumps({'chat_id': chat_id,
                                            'message': 'it is not an image'}))
         return
+
     queue.publish("classify", json.dumps({'chat_id': chat_id,
                                           'image_name': image_name}))
 
@@ -50,6 +53,7 @@ if __name__ == '__main__':
         message = pubsub.get_message()
 
     processPool = Pool()
+    
     while True:
         message = pubsub.get_message()
         if message:
