@@ -39,6 +39,7 @@ def imageClassify(msg):
 
     queue.publish("reply", json.dumps({'chat_id': chat_id,
                                        'message': result}))
+    queue.publish("garbage", image_name)
 
 
 if __name__ == "__main__":
