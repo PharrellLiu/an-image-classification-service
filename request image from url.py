@@ -53,7 +53,7 @@ if __name__ == '__main__':
         message = pubsub.get_message()
 
     processPool = Pool()
-    
+
     while True:
         message = pubsub.get_message()
         if message:
