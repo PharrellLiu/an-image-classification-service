@@ -16,5 +16,3 @@ if __name__ == '__main__':
             image_name = bytes.decode(message['data'])
             if os.path.isfile(image_name):
                 os.remove(image_name)
-            else:
-                pass
