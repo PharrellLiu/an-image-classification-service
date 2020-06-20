@@ -36,6 +36,7 @@ def requestImage(msg):
     except IOError:
         queue.publish("reply", json.dumps({'chat_id': chat_id,
                                            'message': 'it is not an image'}))
+        queue.publish("garbage", image_name)
         return
 
     queue.publish("classify", json.dumps({'chat_id': chat_id,
