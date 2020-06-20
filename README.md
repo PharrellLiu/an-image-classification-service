@@ -8,7 +8,7 @@ is naive, it would not be useful, just like the assignments of courses, only for
 has some defects, some errors, if you wanna issue me, please. Again, don't take it seriously, I am just a fresh grad, 
 looking for a job and hoping this could impress the interviewer (that is impossible) or at least show something of me (LOL).
 
-About it
+About It
 
 Let's talk about the entirety first. I use a telegram bot as a port, users send image, or image's url to the bot, and then 
 receive the result on it too. And I use pytorch Inception V3 model to classify the image (I have to say the result is totally bad, 
@@ -35,11 +35,11 @@ reply.py : All the reply messages would be sent in here.
 garbage collect.py : This is a good one! after downloading something and using it, this program would delete it immediately, 
 but still, this function has some defects, it cannot delete all the downloaded things in some situations.
 
-Something tricky
+Something Tricky
 
 The async model of telepot is hard to understand! Anyway, I just put the url here, you guys can have a look at it. https://telepot.readthedocs.io/en/latest/
 
-In the end
+In The End
 
-I wanted to deploy it on tha AWS EC2, but I failed since the free instance type only has 1 GB memory, I cannot install 
+I wanted to deploy it on tha AWS Ec2, but I failed since the free instance type only has 1 GB memory, I cannot install 
 the torch package on it. But I think these programs can be deployed easily if the memory is enough. And, we can use Supervisor to control this service.
