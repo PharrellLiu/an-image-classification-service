@@ -12,7 +12,7 @@ About It
 
 Let's talk about the entirety first. I use a telegram bot as a port, users send image, or image's url to the bot, and then 
 receive the result on it too. And I use pytorch Inception V3 model to classify the image (I have to say the result is totally bad, 
-but the focus point is not this!). 
+and the initiation is slow, but the focus point is not the ML model!). 
 
 These are the basic stuff, beside of these, I use redis's pub/sub as the way of communication between the processes, also 
 use the multiprocess to achieve parallel processing. 
