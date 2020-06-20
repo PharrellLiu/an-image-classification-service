@@ -8,7 +8,7 @@ looking for a job and hoping this could impress the interviewer (that is impossi
 
 About It
 
-Let's talk about the entirety first. I use a telegram bot as a port, users send image, or image's URL to the bot, and then receive the result on it too. And I use PyTorch Inception V3 model to classify the image (I have to say the result is totally bad, 
+Let's talk about the entirety first. I use a telegram bot as a port, users send image, or image's URL to the bot, and then receive the result on it too. And I use the PyTorch Inception V3 model to classify the image (I have to say the result is totally bad, 
 and the initiation is slow, but the focus point is not the ML model!). 
 
 These are the basic stuff, besides these, I use Redis's pub/sub as the way of communication between the processes, also 
