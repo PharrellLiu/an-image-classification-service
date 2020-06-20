@@ -3,7 +3,7 @@
 Introduction
 
 So, this is a small image classification service, the idea is from the assignments and content of one of my course, 
-IEMS5780 in CUHK, it is about machine learning and how to deploy machine learning. Basically, this service 
+it is about machine learning and how to deploy machine learning. Basically, this service 
 is naive, it would not be useful, just like the assignments of courses, only for learning and practicing. Anyway, it 
 has some defects, some errors, if you wanna issue me, please. Again, don't take it seriously, I am just a fresh grad, 
 looking for a job and hoping this could impress the interviewer (that is impossible) or at least show something of me (LOL).
@@ -37,9 +37,9 @@ but still, this function has some defects, it cannot delete all the downloaded t
 
 Something Tricky
 
-The async model of telepot is hard to understand! Anyway, I just put the url here, you guys can have a look at it. https://telepot.readthedocs.io/en/latest/
+The async model of telepot is so hard to understand! Anyway, I just put the url here, you guys can have a look at it. https://telepot.readthedocs.io/en/latest/
 
 In The End
 
-I wanted to deploy it on tha AWS Ec2, but I failed since the free instance type only has 1 GB memory, I cannot install 
-the torch package on it. But I think these programs can be deployed easily if the memory is enough. And, we can use Supervisor to control this service.
+I wanted to deploy it on tha AWS EC2, but I failed since the free instance type only has 1 GB memory, I cannot install 
+the torch package on it, the package is too large. But I think these programs can be deployed easily if the memory is enough. And, we can use Supervisor to control this service.
