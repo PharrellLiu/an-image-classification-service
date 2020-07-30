@@ -2,7 +2,7 @@
 
 Introduction
 
-So, this is a small image classification service, the idea is from the assignments and content of one of my course, it is about machine learning and how to deploy machine learning. This service is naive, it would not be useful, just like the assignments of courses, only for learning and practicing. Anyway, it has some defects, some errors, if you wanna issue me, please. Again, don't take it seriously, I am just a fresh grad, looking for a job and hoping this could impress the interviewer (that is impossible) or at least show something of me (LOL).
+So, this is a small image classification service, the idea is from the assignments and content of one of my courses, it is about machine learning and how to deploy machine learning. This service is naive, it would not be useful, just like the assignments of courses, only for learning and practicing. Anyway, it has some defects, some errors, if you wanna issue me, please. Again, don't take it seriously, I am just a fresh grad, looking for a job and hoping this could impress the interviewer (that is impossible) or at least show something of me (LOL).
 
 About It
 
